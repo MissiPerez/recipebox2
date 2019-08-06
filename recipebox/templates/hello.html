@@ -1,0 +1,17 @@
+<body style="margin-left: 75px; margin-top:30px;";> </body>
+
+<h1 style="color:#A93226;font-family:cursive;">Missi's Recipe Box</h1>
+
+{% for recipe in recipes %}
+
+<li>
+    <a href="recipes/{{ recipe.id }}">{{ recipe.title }}</a>
+    
+</li>
+
+{% endfor %}
+
+<br>
+<br>
+
+<a href="/addrecipe/"><button style="color:#1A5276;font-size:16px;">Add a recipe</button></a>

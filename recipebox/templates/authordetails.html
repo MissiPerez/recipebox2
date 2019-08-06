@@ -1,0 +1,25 @@
+<body style="margin-left: 75px; margin-top:30px;";> </body>
+
+{% for auth in authors %}
+
+<h1 style="color:#A93226;font-family:cursive;"> Meet our wonderful chef!</h1>
+<p>
+    <strong style="color:#1A5276;">Chef:</strong>
+    {{ auth.name }}
+</p>
+<p>
+    <strong style="color:#1A5276;">Bio:</strong>
+    {{ auth.bio}}
+</p>
+
+<h2 style="color:#1A5276;">{{ auth.name }}'s Recipes:</h2>
+{% for rec in recipes %}
+<li>
+    <a href="/recipes/{{ rec.id }}">{{ rec.title }}</a>
+    
+</li>
+{% endfor %}
+<br>
+<br><br>
+{% endfor %}
+    <a href="/"> <button style="color:#1A5276;font-size:16px;">HOME</button></a>

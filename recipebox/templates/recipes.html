@@ -1,0 +1,27 @@
+<body style="margin-left: 75px; margin-top:30px;";> </body>
+
+{%  for recipe in recipes  %}
+<h1 style="color:#A93226;font-family:cursive;">{{  recipe.title }}</h1>
+<p>
+    <strong style="color:#1A5276;">Chef:</strong>
+    <a href="/author/{{ recipe.author_id}}">{{ recipe.author }}</a>
+</p>
+<p>
+    <strong style="color:#1A5276";>Description:</strong>
+    {{ recipe.description }}
+</p>
+<p>
+    <strong style="color:#1A5276">Time:</strong>
+    {{ recipe.time }}
+</p>
+<p>
+    <strong style="color:#1A5276">Instructions:</strong>
+</p>
+<ol>
+    {% for inst in instructions %}
+    <li>
+        {{ inst }}
+    </li>
+    {% endfor %}
+</ol>
+{% endfor %}
