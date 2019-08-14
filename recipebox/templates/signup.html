@@ -1,0 +1,13 @@
+<body style="margin-left: 75px; margin-top:30px;";> </body>
+
+<h1 style="color:#A93226;font-family:cursive;">Sign up!</h1>
+<br>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Signup" id="button" style="color:#1A5276;font-size:16px;"/>
+    <br>
+    <br>
+    <br>
+    <a href="/"><button style="color:#1A5276">Go Home</button></a>
+</form>
